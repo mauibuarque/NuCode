@@ -2,6 +2,7 @@ import "./styles/index.css";
 import Header from "./components/Header";
 import FinanceForm from "./components/FinanceForm";
 import Total from "./components/Total";
+import FinanceList from "./components/FinanceList";
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
           <FinanceForm />
           <Total />
         </section>
+
+        <FinanceList />
       </main>
     </>
   );
