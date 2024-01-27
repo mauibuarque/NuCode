@@ -23,7 +23,7 @@ const FinanceForm = () => {
           </select>
         </div>
 
-        <button>Inserir valor</button>
+        <button>Inserir Valor</button>
       </form>
     </>
   );
