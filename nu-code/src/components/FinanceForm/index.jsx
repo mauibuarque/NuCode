@@ -1,29 +1,72 @@
+import { useState, useEffect } from "react";
+
 const FinanceForm = () => {
+  const [description, setDescription] = useState("");
+  const [value, setValue] = useState(1);
+  const [valueType, setValueType] = useState("Entrada");
+  const [cardList, setCardList] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem("cardList", JSON.stringify(cardList));
+  }, [cardList]);
+
+  const addCard = ({ description, value, valueType }) => {
+    const newCard = { description, value, valueType };
+
+    setCardList([...cardList, newCard]);
+
+    setDescription("");
+    setValue(1);
+    setValueType("Entrada");
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if ((description, value, valueType)) {
+      addCard({ description, value, valueType });
+    }
+  };
+
   return (
     <>
-      <form>
+      <form onSubmit={(e) => onSubmit(e)}>
         <div>
           <label>Descrição</label>
           <div>
-            <input type="text" placeholder="Digite Aqui sua Descrição" />
+            <input
+              required
+              type="text"
+              placeholder="Digite Aqui sua Descrição"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
             <p>Ex: Compra de Roupas</p>
           </div>
         </div>
 
         <div>
           <label>Valor (R$)</label>
-          <input type="text" placeholder="1" />
+          <input
+            required
+            type="text"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          />
         </div>
 
         <div>
           <label>Tipo de Valor</label>
-          <select>
+          <select
+            value={valueType}
+            onChange={(e) => setValueType(e.target.value)}
+          >
             <option value="Entrada">Entrada</option>
             <option value="Saída">Saída</option>
           </select>
         </div>
 
-        <button>Inserir Valor</button>
+        <button type="submit">Inserir Valor</button>
       </form>
     </>
   );
