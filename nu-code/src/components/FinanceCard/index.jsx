@@ -11,7 +11,7 @@ const FinanceCard = ({ card }) => {
     <>
       <div>
         <h3>{description}</h3>
-        <p>R$ {formatValue(value)}</p>
+        <p>{formatValue(value)}</p>
       </div>
 
       <div>

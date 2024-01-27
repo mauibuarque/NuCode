@@ -1,19 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const FinanceForm = () => {
+const FinanceForm = ({ cardList, setCardList }) => {
   const [description, setDescription] = useState("");
   const [value, setValue] = useState(1);
   const [valueType, setValueType] = useState("Entrada");
-  const [cardList, setCardList] = useState([]);
-
-  useEffect(() => {
-    localStorage.setItem("cardList", JSON.stringify(cardList));
-  }, [cardList]);
 
   const addCard = ({ description, value, valueType }) => {
     const newCard = { description, value, valueType };
 
     setCardList([...cardList, newCard]);
+
+    const getCardList = JSON.parse(localStorage.getItem("cardList"));
+
+    const newCardList = [...getCardList, newCard];
+
+    localStorage.setItem("cardList", JSON.stringify(newCardList));
 
     setDescription("");
     setValue(1);
