@@ -1,14 +1,20 @@
+import FinanceCard from "../FinanceCard";
+
 const FinanceList = () => {
-  const list = [];
+  const getCardList = JSON.parse(localStorage.getItem("cardList"));
 
   return (
     <>
       <h2>Resumo Financeiro</h2>
 
-      {list.length > 0 ? (
-        <p>Você Ainda Não Possui Nenhum Lançamento</p>
+      {getCardList?.length > 0 ? (
+        <ul>
+          {getCardList?.map((card, index) => (
+            <FinanceCard key={index} card={card} />
+          ))}
+        </ul>
       ) : (
-        <ul></ul>
+        <p>Você Ainda Não Possui Nenhum Lançamento</p>
       )}
     </>
   );
