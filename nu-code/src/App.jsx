@@ -16,6 +16,12 @@ const App = () => {
 
   const [cardList, setCardList] = useState([]);
 
+  const formatValue = (price) => {
+    const opts = { style: "currency", currency: "BRL" };
+
+    return price.toLocaleString(price, opts);
+  };
+
   return (
     <>
       <Header />
@@ -23,10 +29,10 @@ const App = () => {
       <main>
         <section>
           <FinanceForm cardList={cardList} setCardList={setCardList} />
-          <Total />
+          <Total formatValue={formatValue} />
         </section>
 
-        <FinanceList setCardList={setCardList} />
+        <FinanceList setCardList={setCardList} formatValue={formatValue} />
       </main>
     </>
   );

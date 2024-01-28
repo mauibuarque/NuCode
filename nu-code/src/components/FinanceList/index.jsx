@@ -1,6 +1,6 @@
 import FinanceCard from "../FinanceCard";
 
-const FinanceList = ({ setCardList }) => {
+const FinanceList = ({ setCardList, formatValue }) => {
   const getCardList = JSON.parse(localStorage.getItem("cardList"));
 
   return (
@@ -12,9 +12,9 @@ const FinanceList = ({ setCardList }) => {
           {getCardList?.map((card, index) => (
             <FinanceCard
               key={index}
-              cardId={index}
               card={card}
               setCardList={setCardList}
+              formatValue={formatValue}
             />
           ))}
         </ul>

@@ -1,11 +1,5 @@
-const FinanceCard = ({ cardId, card, setCardList }) => {
-  const { description, value, valueType } = card;
-
-  const formatValue = (price) => {
-    const opts = { style: "currency", currency: "BRL" };
-
-    return price.toLocaleString(price, opts);
-  };
+const FinanceCard = ({ card, setCardList, formatValue }) => {
+  const { id, description, value, valueType } = card;
 
   const deleteCard = (cardId) => {
     const getCardList = JSON.parse(localStorage.getItem("cardList"));
@@ -25,12 +19,12 @@ const FinanceCard = ({ cardId, card, setCardList }) => {
     <>
       <div>
         <h3>{description}</h3>
-        <p>{formatValue(Number(value))}</p>
+        <p>{formatValue(value)}</p>
       </div>
 
       <div>
         <p>{valueType}</p>
-        <button onClick={() => deleteCard(cardId)}>Excluir</button>
+        <button onClick={() => deleteCard(id)}>Excluir</button>
       </div>
     </>
   );
