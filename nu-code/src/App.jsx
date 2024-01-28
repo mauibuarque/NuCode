@@ -26,7 +26,7 @@ const App = () => {
           <Total />
         </section>
 
-        <FinanceList />
+        <FinanceList setCardList={setCardList} />
       </main>
     </>
   );
