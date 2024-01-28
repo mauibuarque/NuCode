@@ -4,9 +4,7 @@ const FinanceCard = ({ card, setCardList, formatValue }) => {
   const deleteCard = (cardId) => {
     const getCardList = JSON.parse(localStorage.getItem("cardList"));
 
-    const filterCardList = getCardList.filter(
-      (card, index) => index !== cardId
-    );
+    const filterCardList = getCardList.filter((card) => card.id !== cardId);
 
     setCardList(filterCardList);
 

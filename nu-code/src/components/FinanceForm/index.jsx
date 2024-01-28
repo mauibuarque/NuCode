@@ -13,7 +13,7 @@ const FinanceForm = ({ cardList, setCardList }) => {
     }
 
     const newCard = {
-      id: cardList.length + 1,
+      id: cardList.length,
       description,
       value: newValue,
       valueType,
