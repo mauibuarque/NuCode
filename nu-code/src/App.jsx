@@ -3,9 +3,7 @@ import "./styles/index.css";
 import { useState } from "react";
 
 import Header from "./components/Header";
-import FinanceForm from "./components/FinanceForm";
-import Total from "./components/Total";
-import FinanceList from "./components/FinanceList";
+import Main from "./components/Main";
 
 const App = () => {
   const getCardList = JSON.parse(localStorage.getItem("cardList"));
@@ -16,24 +14,10 @@ const App = () => {
 
   const [cardList, setCardList] = useState([]);
 
-  const formatValue = (price) => {
-    const opts = { style: "currency", currency: "BRL" };
-
-    return price.toLocaleString(price, opts);
-  };
-
   return (
     <>
       <Header />
-
-      <main>
-        <section>
-          <FinanceForm cardList={cardList} setCardList={setCardList} />
-          <Total formatValue={formatValue} />
-        </section>
-
-        <FinanceList setCardList={setCardList} formatValue={formatValue} />
-      </main>
+      <Main cardList={cardList} setCardList={setCardList} />
     </>
   );
 };

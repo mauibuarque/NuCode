@@ -1,3 +1,5 @@
+import style from "./style.module.css";
+
 import { useState } from "react";
 
 const FinanceForm = ({ cardList, setCardList }) => {
@@ -42,7 +44,7 @@ const FinanceForm = ({ cardList, setCardList }) => {
 
   return (
     <>
-      <form onSubmit={(e) => onSubmit(e)}>
+      <form onSubmit={(e) => onSubmit(e)} className={style.form}>
         <div>
           <label>Descrição</label>
           <div>
