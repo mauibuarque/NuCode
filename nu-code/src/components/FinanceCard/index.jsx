@@ -1,3 +1,5 @@
+import style from "./style.module.css";
+
 const FinanceCard = ({ card, setCardList, formatValue }) => {
   const { id, description, value, valueType } = card;
 
@@ -15,15 +17,17 @@ const FinanceCard = ({ card, setCardList, formatValue }) => {
 
   return (
     <>
-      <div>
-        <h3>{description}</h3>
-        <p>{formatValue(value)}</p>
-      </div>
+      <section className={style.cardSection}>
+        <div className={style.cardTitle}>
+          <h3>{description}</h3>
+          <p>{formatValue(value)}</p>
+        </div>
 
-      <div>
-        <p>{valueType}</p>
-        <button onClick={() => deleteCard(id)}>Excluir</button>
-      </div>
+        <div className={style.cardType}>
+          <p>{valueType}</p>
+          <button onClick={() => deleteCard(id)}>Excluir</button>
+        </div>
+      </section>
     </>
   );
 };

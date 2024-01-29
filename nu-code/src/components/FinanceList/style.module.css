@@ -3,3 +3,12 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.financeListHeader {
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}

@@ -8,7 +8,14 @@ const FinanceList = ({ setCardList, formatValue }) => {
   return (
     <>
       <section className={style.financeList}>
-        <h2>Resumo Financeiro</h2>
+        <div className={style.financeListHeader}>
+          <h2>Resumo Financeiro</h2>
+          <div className={style.buttons}>
+            <button>Todos</button>
+            <button>Entradas</button>
+            <button>Despesas</button>
+          </div>
+        </div>
 
         {getCardList?.length > 0 ? (
           <ul>

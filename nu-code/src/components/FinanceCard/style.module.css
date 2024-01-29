@@ -1,0 +1,19 @@
+.cardSection {
+  height: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: azure;
+}
+
+.cardTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardType {
+  display: flex;
+  justify-content: space-between;
+}
