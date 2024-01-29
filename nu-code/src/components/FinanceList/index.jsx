@@ -18,7 +18,7 @@ const FinanceList = ({ setCardList, formatValue }) => {
         </div>
 
         {getCardList?.length > 0 ? (
-          <ul>
+          <ul className={style.cardList}>
             {getCardList?.map((card, index) => (
               <FinanceCard
                 key={index}

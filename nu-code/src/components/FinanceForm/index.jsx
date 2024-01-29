@@ -10,7 +10,7 @@ const FinanceForm = ({ cardList, setCardList }) => {
   const addCard = ({ description, value, valueType }) => {
     let newValue = Number(value);
 
-    if (valueType === "saída") {
+    if (valueType === "Despesa") {
       newValue = -newValue;
     }
 
@@ -75,8 +75,8 @@ const FinanceForm = ({ cardList, setCardList }) => {
             value={valueType}
             onChange={(e) => setValueType(e.target.value)}
           >
-            <option value="entrada">Entrada</option>
-            <option value="saída">Saída</option>
+            <option value="Entrada">Entrada</option>
+            <option value="Despesa">Despesa</option>
           </select>
         </div>
 
