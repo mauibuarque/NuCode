@@ -45,10 +45,11 @@ const FinanceForm = ({ cardList, setCardList }) => {
   return (
     <>
       <form onSubmit={(e) => onSubmit(e)} className={style.form}>
-        <div>
+        <div className={style.formValues}>
           <label>Descrição</label>
-          <div>
+          <div className={style.formDescription}>
             <input
+              className={style.inputs}
               required
               type="text"
               placeholder="Digite Aqui sua Descrição"
@@ -59,19 +60,21 @@ const FinanceForm = ({ cardList, setCardList }) => {
           </div>
         </div>
 
-        <div>
+        <div className={style.formValues}>
           <label>Valor (R$)</label>
           <input
+            className={style.inputs}
             required
-            type="text"
+            type="number"
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
         </div>
 
-        <div>
+        <div className={style.formValues}>
           <label>Tipo de Valor</label>
           <select
+            className={style.inputs}
             value={valueType}
             onChange={(e) => setValueType(e.target.value)}
           >
@@ -80,7 +83,9 @@ const FinanceForm = ({ cardList, setCardList }) => {
           </select>
         </div>
 
-        <button type="submit">Inserir Valor</button>
+        <button type="submit" className={style.formButton}>
+          Inserir Valor
+        </button>
       </form>
     </>
   );

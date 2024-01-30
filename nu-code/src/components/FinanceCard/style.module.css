@@ -1,19 +1,55 @@
 .cardSection {
-  height: 60px;
+  height: fit-content;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 40px;
 
-  background-color: azure;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  background-color: var(--grey-1);
 }
 
 .cardTitle {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  p {
+    color: var(--grey-3);
+  }
 }
 
 .cardType {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+
+  p {
+    color: var(--grey-3);
+  }
+
+  button {
+    width: fit-content;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: var(--grey-2);
+
+    border: 2px, solid, var(--grey-2);
+    border-radius: 8px;
+
+    font-family: var(--font-secundary);
+    font-weight: var(--font-weight-medium);
+
+    cursor: pointer;
+  }
 }

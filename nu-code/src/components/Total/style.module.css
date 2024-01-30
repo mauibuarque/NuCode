@@ -1,0 +1,25 @@
+.totalValueSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  padding: 20px;
+
+  border: 1px solid #00000033;
+
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-small);
+  font-size: 14px;
+}
+
+.value {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: var(--font-weight-large);
+  font-size: 16px;
+
+  p {
+    color: var(--primary-color);
+  }
+}

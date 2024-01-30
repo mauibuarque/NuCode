@@ -1,3 +1,5 @@
+import style from "./style.module.css";
+
 const Total = ({ formatValue }) => {
   const getTotalValue = () => {
     const getCardList = JSON.parse(localStorage.getItem("cardList"));
@@ -12,12 +14,14 @@ const Total = ({ formatValue }) => {
 
   return (
     <>
-      <div>
-        <h2>Valor Total:</h2>
-        <p>{formatValue(getTotalValue())}</p>
-      </div>
+      <section className={style.totalValueSection}>
+        <div className={style.value}>
+          <h2>Valor Total:</h2>
+          <p>{formatValue(getTotalValue())}</p>
+        </div>
 
-      <p>O Valor se Refere ao Saldo</p>
+        <p>O Valor se Refere ao Saldo</p>
+      </section>
     </>
   );
 };
