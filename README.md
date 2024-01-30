@@ -26,7 +26,7 @@ A aplicação foi desenvolvida utilizando React, JavaScript (JSX), HTML e CSS. T
 
 ## Como Acessar
 
-1. Link: https://nucode-ewgje8p0f-mauibuarque.vercel.app
+1. Acesse o Link: https://nucode-nvrc1pqcl-mauibuarque.vercel.app
 
 2. Caso deseje executar a aplicação localmente em sua máquina, clone este repositório.
 
