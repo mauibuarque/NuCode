@@ -74,7 +74,7 @@ const FinanceForm = ({ cardList, setCardList }) => {
         <div className={style.formValues}>
           <label>Tipo de Valor</label>
           <select
-            className={style.inputs}
+            className={`${style.inputs} ${style.select}`}
             value={valueType}
             onChange={(e) => setValueType(e.target.value)}
           >
