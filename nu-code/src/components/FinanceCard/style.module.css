@@ -1,5 +1,5 @@
 .cardSection {
-  height: fit-content;
+  height: 120px;
 
   display: flex;
   flex-direction: column;

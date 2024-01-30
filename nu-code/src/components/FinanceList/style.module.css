@@ -9,6 +9,10 @@
   font-weight: var(--font-weight-large);
 }
 
+.noCards {
+  height: 120px;
+}
+
 .financeListHeader {
   display: flex;
   flex-direction: column;

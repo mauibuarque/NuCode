@@ -72,7 +72,9 @@ const FinanceList = ({ setCardList, formatValue }) => {
             ))}
           </ul>
         ) : (
-          <p>Você Ainda Não Possui Nenhum Lançamento</p>
+          <p className={style.noCards}>
+            Você Ainda Não Possui Nenhum Lançamento
+          </p>
         )}
       </section>
     </>
