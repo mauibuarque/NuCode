@@ -28,13 +28,18 @@
 
   background-color: var(--grey-2);
 
-  border: 2px, solid, var(--grey-2);
+  border: none;
   border-radius: 8px;
 
   font-family: var(--font-secundary);
   font-weight: var(--font-weight-medium);
 
   cursor: pointer;
+}
+
+.button.active {
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 
 .cardList {

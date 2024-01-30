@@ -28,19 +28,31 @@ const FinanceList = ({ setCardList, formatValue }) => {
           <h2>Resumo Financeiro</h2>
           <div className={style.buttons}>
             <button
-              className={style.button}
+              className={
+                filterType === "Todos"
+                  ? `${style.button} ${style.active}`
+                  : style.button
+              }
               onClick={() => filterCards("Todos")}
             >
               Todos
             </button>
             <button
-              className={style.button}
+              className={
+                filterType === "Entrada"
+                  ? `${style.button} ${style.active}`
+                  : style.button
+              }
               onClick={() => filterCards("Entrada")}
             >
               Entradas
             </button>
             <button
-              className={style.button}
+              className={
+                filterType === "Despesa"
+                  ? `${style.button} ${style.active}`
+                  : style.button
+              }
               onClick={() => filterCards("Despesa")}
             >
               Despesas
