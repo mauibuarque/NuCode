@@ -3,7 +3,9 @@
 :root {
   --primary-color: #fd377e;
   --primary-color-2: #e34981;
-  --secundary-color: #03b898;
+
+  --inflow: #4caf50;
+  --outflow: #ff5252;
 
   --white: #ffffff;
 

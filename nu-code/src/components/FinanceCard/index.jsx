@@ -17,17 +17,28 @@ const FinanceCard = ({ card, setCardList, formatValue }) => {
 
   return (
     <>
-      <section className={style.cardSection}>
-        <div className={style.cardTitle}>
-          <h3>{description}</h3>
-          <p>{formatValue(value)}</p>
+      <div className={style.card}>
+        <div
+          className={
+            valueType === "Despesa"
+              ? `${style.cardColor} ${style.cardColorOutflow}`
+              : style.cardColor
+          }
+        >
+          <span></span>
         </div>
+        <section className={style.cardSection}>
+          <div className={style.cardTitle}>
+            <h3>{description}</h3>
+            <p>{formatValue(value)}</p>
+          </div>
 
-        <div className={style.cardType}>
-          <p>{valueType}</p>
-          <button onClick={() => deleteCard(id)}>Excluir</button>
-        </div>
-      </section>
+          <div className={style.cardType}>
+            <p>{valueType}</p>
+            <button onClick={() => deleteCard(id)}>Excluir</button>
+          </div>
+        </section>
+      </div>
     </>
   );
 };
