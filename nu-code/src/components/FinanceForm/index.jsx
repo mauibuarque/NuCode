@@ -52,11 +52,11 @@ const FinanceForm = ({ cardList, setCardList }) => {
               className={style.inputs}
               required
               type="text"
-              placeholder="Digite Aqui sua Descrição"
+              placeholder="Digite aqui sua descrição"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
-            <p>Ex: Compra de Roupas</p>
+            <p>Ex: Compra de roupas</p>
           </div>
         </div>
 

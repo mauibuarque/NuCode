@@ -20,7 +20,7 @@ const Total = ({ formatValue }) => {
           <p>{formatValue(getTotalValue())}</p>
         </div>
 
-        <p>O Valor se Refere ao Saldo</p>
+        <p>O valor se refere ao saldo</p>
       </section>
     </>
   );

@@ -12,20 +12,22 @@
 .noCards {
   display: flex;
   justify-content: center;
-  align-items: center;
 
   height: 120px;
+
+  margin-top: 25px;
 }
 
 .financeListHeader {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
 }
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 25px;
 }
 
 .button {
@@ -69,11 +71,5 @@
 
   .noCards {
     display: block;
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: start;
-    gap: 30px;
   }
 }
