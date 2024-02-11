@@ -1,6 +1,6 @@
 # NuCode - Organizador Financeiro
 
-NuCode é um aplicativo de organização financeira inspirado na simplicidade e eficiência do NuBank. Com uma interface intuitiva, permite que você mantenha controle fácil de suas transações financeiras de forma organizada.
+NuCode é um site de organização financeira inspirado na simplicidade e eficiência do NuBank. Com uma interface intuitiva, permite que você mantenha controle fácil de suas transações financeiras de forma organizada.
 
 ## Funcionalidades Principais
 
