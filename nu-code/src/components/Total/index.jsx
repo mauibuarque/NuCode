@@ -1,10 +1,8 @@
 import style from "./style.module.css";
 
-const Total = ({ formatValue }) => {
+const Total = ({ cardList, formatValue }) => {
   const getTotalValue = () => {
-    const getCardList = JSON.parse(localStorage.getItem("cardList"));
-
-    const totalValue = getCardList.reduce(
+    const totalValue = cardList.reduce(
       (accumulator, currentValue) => accumulator + currentValue.value,
       0
     );

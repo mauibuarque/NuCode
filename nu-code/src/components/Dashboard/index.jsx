@@ -1,19 +1,15 @@
 import style from "./style.module.css";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import FinanceForm from "../FinanceForm";
 import Total from "../Total";
 import FinanceList from "../FinanceList";
 
 const Dashboard = () => {
-  const getCardList = JSON.parse(localStorage.getItem("cardList"));
+  const getCardList = JSON.parse(localStorage.getItem("cardList")) || [];
 
-  if (!getCardList) {
-    localStorage.setItem("cardList", JSON.stringify([]));
-  }
-
-  const [cardList, setCardList] = useState([]);
+  const [cardList, setCardList] = useState(getCardList);
 
   const formatValue = (price) => {
     const opts = { style: "currency", currency: "BRL" };
@@ -21,15 +17,23 @@ const Dashboard = () => {
     return price.toLocaleString(price, opts);
   };
 
+  useEffect(() => {
+    localStorage.setItem("cardList", JSON.stringify(cardList));
+  }, [cardList]);
+
   return (
     <>
       <main className={style.dashboard}>
         <section className={style.formSection}>
           <FinanceForm cardList={cardList} setCardList={setCardList} />
-          <Total formatValue={formatValue} />
+          <Total cardList={cardList} formatValue={formatValue} />
         </section>
 
-        <FinanceList setCardList={setCardList} formatValue={formatValue} />
+        <FinanceList
+          cardList={cardList}
+          setCardList={setCardList}
+          formatValue={formatValue}
+        />
       </main>
     </>
   );

@@ -23,12 +23,6 @@ const FinanceForm = ({ cardList, setCardList }) => {
 
     setCardList([...cardList, newCard]);
 
-    const getCardList = JSON.parse(localStorage.getItem("cardList"));
-
-    const newCardList = [...getCardList, newCard];
-
-    localStorage.setItem("cardList", JSON.stringify(newCardList));
-
     setDescription("");
     setValue(1);
     setValueType("Entrada");

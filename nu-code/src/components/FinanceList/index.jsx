@@ -4,16 +4,14 @@ import { useState } from "react";
 
 import FinanceCard from "../FinanceCard";
 
-const FinanceList = ({ setCardList, formatValue }) => {
-  const getCardList = JSON.parse(localStorage.getItem("cardList"));
-
+const FinanceList = ({ cardList, setCardList, formatValue }) => {
   const [filterType, setFilterType] = useState("Todos");
 
   const filterCards = (type) => {
     setFilterType(type);
   };
 
-  const filteredCardList = getCardList.filter((card) => {
+  const filteredCardList = cardList.filter((card) => {
     if (filterType === "Todos") {
       return true;
     }
@@ -66,6 +64,7 @@ const FinanceList = ({ setCardList, formatValue }) => {
               <FinanceCard
                 key={index}
                 card={card}
+                cardList={cardList}
                 setCardList={setCardList}
                 formatValue={formatValue}
               />
