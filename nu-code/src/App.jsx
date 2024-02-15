@@ -1,7 +1,6 @@
 import "./styles/index.css";
 
-import Header from "./components/Header";
-import Dashboard from "./components/Dashboard";
+import { Header, Dashboard } from "./components";
 
 const App = () => {
   return (

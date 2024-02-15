@@ -2,7 +2,7 @@ import style from "./style.module.css";
 
 import { useState } from "react";
 
-import FinanceCard from "../FinanceCard";
+import { FinanceCard } from "../index";
 
 const FinanceList = ({ cardList, setCardList, formatValue }) => {
   const [filterType, setFilterType] = useState("Todos");

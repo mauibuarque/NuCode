@@ -2,9 +2,7 @@ import style from "./style.module.css";
 
 import { useEffect, useState } from "react";
 
-import FinanceForm from "../FinanceForm";
-import Total from "../Total";
-import FinanceList from "../FinanceList";
+import { FinanceForm, Total, FinanceList } from "../index";
 
 const Dashboard = () => {
   const getCardList = JSON.parse(localStorage.getItem("cardList")) || [];
